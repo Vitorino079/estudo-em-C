@@ -9,7 +9,8 @@ int main(){
     float Area; // tamanho da area do Estado por km2 
     float PIB; // importaçao do valor do PIB do Estado
     int Pontos; // quantidade de pontos turisticos existentes
-
+    float Densidade;
+    float Capita;
 //// CADASTRO PARA A PRIMEIRA CARTA DO JOGO SUPER TRUNFO
 
 printf("Olá, sejam bem vindos ao jogo Super Trunfo: Vamos começar?!\n"); // dando boas vindas ao jogador
@@ -42,7 +43,18 @@ scanf("%d", &Pontos); // obtendo resposta de cadastro do jogador.
 printf("Pontos Turisticos Registrados: %d\n", Pontos); // mostrando resultado cadastrado pelo o jogador.
 
 printf("\nCadastrado da Carta Finalizado!\n Resultado do Cadastro:\n"); // texto afirmando que finalizou o cadastro e mostrara o resultado final.
-printf("\nCarta 1: \nEstado: %c. \nCodigo da Carta: %c%s. \nNome da Cidade: %s. \nPopulação: %d. \nArea em km²: %f. \nPIB: %f. \nNumeros de Pontos Turisticos: %d.\n", Estado, Estado,Codigo, Cidade, Populaçao, Area, PIB, Pontos); //apresentaçao dos dados de entrada e saida do jogador!
+printf("\nCarta 1: \nEstado: %c. \nCodigo da Carta: %c%s. \nNome da Cidade: %s. \nPopulação: %dkm². \nArea em km²: %f. \nPIB: %f. \nNumeros de Pontos Turisticos: %d.\n", Estado, Estado,Codigo, Cidade, Populaçao, Area, PIB, Pontos); //apresentaçao dos dados de entrada e saida do jogador!
+
+// CALCULAR A DENSIDADE POPULACIONAL
+    printf("\n=== RESULTADOS CALCULADOS ===\n");
+Densidade = (float) Populaçao / Area;
+printf("Densidade populacional e: %.2f hab/km²\n", Densidade);
+
+// CALCULAR A PIB Per Capita
+    printf("\n=== RESULTADOS CALCULADOS ===\n");
+Capita = (float) PIB / Populaçao;
+printf("PIB per Capita e: R$ %.2f\n", Capita);
+
 
 //// CADASTRO PARA A SEGUNDA CARTA DO JOGO SUPER TRUNFO
 
@@ -78,6 +90,16 @@ printf("Pontos Turisticos Registrados: %d\n", Pontos); // mostrando resultado ca
 
 printf("\nCadastrado da Carta Finalizado!\n Resultado do Cadastro:\n"); // texto afirmando que finalizou o cadastro e mostrara o resultado final.
 printf("\nCarta 2: \nEstado: %c. \nCodigo da Carta: %c%s. \nNome da Cidade: %s. \nPopulação: %d. \nArea em km²: %f. \nPIB: %f. \nNumeros de Pontos Turisticos: %d.\n", Estado, Estado,Codigo, Cidade, Populaçao, Area, PIB, Pontos); //apresentaçao dos dados de entrada e saida do jogador!
+
+// CALCULAR A DENSIDADE POPULACIONAL
+    printf("\n=== RESULTADOS CALCULADOS ===\n");
+Densidade = (float) Populaçao / Area;
+printf("Densidade populacional e: %.2f hab/km²\n", Densidade);
+
+// CALCULAR A PIB Per Capita
+    printf("\n=== RESULTADOS CALCULADOS ===\n");
+Capita = (float) PIB / Populaçao;
+printf("PIB per Capita e: R$ %.2f\n", Capita);
 
 printf("\nObrigado por jogar SUPER TRUNFO!"); // agradecimento final
 return 0;
